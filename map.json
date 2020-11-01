@@ -28,8 +28,12 @@
       "type": "single",
       "fields": ["Indicator Type"],
       "bind": {
-        "Indicator Type": { "input": "select" ,"options":["Import","Export","All"]}
-      }
+        "Indicator Type": {
+          "input": "select",
+          "options": ["Import", "Export"]
+        }
+      },
+      "init": {"Indicator Type":"Import"}
     }
   },
   "transform": [
@@ -43,20 +47,22 @@
         "fields": ["Partner", "amount", "Indicator Type"]
       },
       "default": "0"
-    },
-    {
-      "filter": { "selection": "select" }
     }
   ],
   "encoding": {
     "color": {
-      "field": "amount",
-      "type": "quantitative",
-      "scale": {
-        "type": "linear",
-        "domain": [0, 20000],
-        "scheme": "lightgreyred"
-      }
+      "condition": {
+        "selection": "select",
+        "field": "amount",
+        "type": "quantitative",
+        "scale": {
+          "type": "linear",
+          "domain": [0, 20000],
+          "scheme": "reds"
+        }
+      },
+      "value":"lightgray"
+
     },
     "tooltip": [
       {

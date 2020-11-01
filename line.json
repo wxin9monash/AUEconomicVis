@@ -1,0 +1,131 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "Stock prices of 5 Tech Companies over Time.",
+
+  "data": { "url": "en_AUS_allyears_wits_trade_summary_Full.csv" },
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "amount",
+          "as": "amount"
+        }
+      ],
+      "groupby": ["Indicator Type", "year"]
+    }
+  ],
+
+  "concat": [
+    {
+      "title":{
+        "text":"Comparative trend of annual import and export amount in Australia",
+        "fontSize":20,
+        "subtitle":"Use the mouse to select an area to interact with the pie chart",
+        "subtitleFontSize":18,
+        "subtitleColor":"blue"
+      },
+      "width": 600,
+      "height": 300,
+      "mark": {
+        "type": "line",
+        "point": true
+      },
+      "selection": {
+        "brush": {
+          "type": "interval"
+        }
+      },
+      "encoding": {
+        "x": { "timeUnit": "year", "field": "year", "axis": { "grid": false } },
+        "y": {
+          "aggregate": "sum",
+          "field": "amount",
+          "type": "quantitative",
+          "axis": { "grid": false }
+        },
+        "color": {
+          "field": "Indicator Type",
+          "type": "nominal",
+          "scale": { "range": ["#e84545", "#2b2e4a"] },
+          "legend":{
+            "orient":"top-left"
+          }
+        },
+        
+        "tooltip": [
+          { "field": "Indicator Type" },
+          { "field": "amount", "title": "Amount" },
+          { "field": "year", "timeUnit": "year", "title": "Year" }
+        ]
+      }
+    },
+    {
+      "title":{
+        "text":"Pie chart of total imports and exports"
+        ,"fontSize":18
+      },
+      "width": 400,
+      "height": 300,
+      "transform": [
+        { "filter": { "selection": "brush" } },
+        {
+          "aggregate": [
+            {
+              "op": "sum",
+              "field": "amount",
+              "as": "amount"
+            }
+          ],
+          "groupby": ["Indicator Type"]
+        }
+      ],
+
+      "encoding": {
+        "theta": {
+          "aggregate": "sum",
+          "field": "amount",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "Indicator Type",
+          "type": "nominal",
+          "scale": { "range": ["#e84545", "#2b2e4a"] }
+        },
+        "tooltip": [
+          { "field": "Indicator Type" },
+          { "field": "amount", "title": "Total Amount" }
+        ]
+      },
+      "layer": [
+        {
+          "mark": { "type": "arc", "outerRadius": 120 }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "dy": -150,
+            "radius": 140
+          },
+          "encoding": {
+            "text": { "field": "Indicator Type" },
+            "color": { "value": "white" }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "dy": -130,
+            "radius": 140
+          },
+          "encoding": {
+            "text": { "field": "amount" ,"format":"~s"},
+            "color": { "value": "white" }
+          }
+        }
+      ],
+
+      "view": { "stroke": null }
+    }
+  ]
+}

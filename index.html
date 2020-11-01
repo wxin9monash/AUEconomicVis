@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.16.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.16.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+    <title>map</title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+
+        .article {
+            margin: 0px 150px 30px 10px;
+            line-height: 30px;
+
+        }
+
+        #main {
+            width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        h1,
+        h3 {
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+
+        <h1> AUS all years wits trade summary</h1>
+        <h3>Trade (US$ Mil)-Top 5 Export Partner</h3>
+        <hr>
+
+        <div class="module">
+            <div id="map"> </div>
+            <p class="article">
+                Australia's import and export volume with other countries in 2018,
+                The top five countries with trading volume are relatively stable,
+                Japan, respectively
+                United States of America
+                Sounth Korea
+                India
+                Thailand
+                These countries
+            </p>
+        </div>
+        <div class="module">
+            <div id="area"> </div>
+            <ul class="article">
+                <li>
+                    Export: before 2007, exports were mainly concentrated in Japan, New Zealand and the United States.
+                    After 2008, the export share of India and South Korea increased greatly
+                </li>
+                <li>
+                    Import: the main import countries are the United States, Japan, Singapore
+                </li>
+            </ul>
+        </div>
+        <div id="line"> </div>
+        <p class="article">
+            Since 2004,
+            The trade surplus has gradually increased, and the export value has been greater than the import value.
+            Present a good state of foreign trade transactions.
+            However, after 2012, there was a major decline, and the volume of import and export trade was basically flat.
+            Present an unstable state and trend </p>
+    </div>
+    <script>
+        vegaEmbed("#map", 'map.json')
+        vegaEmbed("#line", 'line.json')
+        vegaEmbed("#area", 'area.json')
+
+
+    </script>
+
+</body>
+
+</html>

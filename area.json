@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": {
+    "text": "Annual import and export trends of each country",
+    "subtitle":" Click on the filter at the bottom of the figure to filter import or export",
+    "fontSize": 20,
+    "align": "center"
+  },
+  "width":1000,
+  "height":300,
+  "data": { "url": "en_AUS_allyears_wits_trade_summary_Full.csv" },
+  "mark": {
+    "type": "bar",
+    "cornerRadiusTopLeft": 3,
+    "cornerRadiusTopRight": 3,
+    "tooltip": true
+  },
+  "selection": {
+    "select": {
+      "type": "single",
+      "fields": ["Indicator Type"],
+      "bind": { "input": "select", "options": ["Import", "Export"] }
+    }
+  },
+  "transform": [
+    {
+      "filter": { "selection": "select" }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "timeUnit": "year",
+      "field": "year",
+      "title": "Year",
+      "type": "ordinal"
+    },
+    "y": { "aggregate": "sum", "field": "amount", "axis": { "grid": false } },
+    "color": {
+      "field": "Partner",
+      "scale": {
+        "scheme": "category20c"
+      }
+    }
+  }
+}

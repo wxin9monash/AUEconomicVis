@@ -1,16 +1,23 @@
 Indicator,Indicator Type,Partner,Product categories,Reporter,year,amount
-Trade (US$ Mil)-Top 5 Export Partner,Export,Japan,All Products,Australia,2018,41355.76
-Trade (US$ Mil)-Top 5 Import Partner,Import,United States of America,All Products,Australia,2018,24664.66
-Trade (US$ Mil)-Top 5 Export Partner,Export,Sounth Korea,All Products,Australia,2018,17745.6
-Trade (US$ Mil)-Top 5 Import Partner,Import,Japan,All Products,Australia,2018,17351.1
-Trade (US$ Mil)-Top 5 Export Partner,Export,India,All Products,Australia,2018,12369.31
-Trade (US$ Mil)-Top 5 Import Partner,Import,Thailand,All Products,Australia,2018,11523.93
-Trade (US$ Mil)-Top 5 Export Partner,Export,United States of America,All Products,Australia,2018,9552.81
-Trade (US$ Mil)-Top 5 Import Partner,Import,Sounth Korea,All Products,Australia,2018,0
-Trade (US$ Mil)-Top 5 Import Partner,Import,New Zealand,All Products,Australia,2018,0
-Trade (US$ Mil)-Top 5 Import Partner,Import,Singapore,All Products,Australia,2018,0
-Trade (US$ Mil)-Top 5 Import Partner,Import,United Kingdom,All Products,Australia,2018,0
-Trade (US$ Mil)-Top 5 Export Partner,Export,"Hong Kong, China",All Products,Australia,2018,0
-Trade (US$ Mil)-Top 5 Export Partner,Export,New Zealand,All Products,Australia,2018,0
-Trade (US$ Mil)-Top 5 Export Partner,Export,Singapore,All Products,Australia,2018,0
-Trade (US$ Mil)-Top 5 Export Partner,Export,Special Categories,All Products,Australia,2018,0
+Australia,Import,China,All Products,Australia,2018,57699.42
+Australia,Import,Germany,All Products,Australia,2018,11623.56
+Australia,Import,Japan,All Products,Australia,2018,17351.1
+Australia,Import,"Korea, Rep.",All Products,Australia,2018,15899.13
+Australia,Import,New Zealand,All Products,Australia,2018,7955.25
+Australia,Import,Singapore,All Products,Australia,2018,15010.98
+Australia,Import,Thailand,All Products,Australia,2018,11523.93
+Australia,Import,United Kingdom,All Products,Australia,2018,4796.86
+Australia,Import,France,All Products,Australia,2018,3706.98
+Australia,Import,Brazil,All Products,Australia,2018,1027.2
+Australia,Import,Italy,All Products,Australia,2018,101.82
+Australia,Import,Canada,All Products,Australia,2018,8534.01
+Australia,Import,Russia,All Products,Australia,2018,766.11
+Australia,Import,Spain,All Products,Australia,2018,141.82
+Australia,Import,Indonesia,All Products,Australia,2018,3473.05
+Australia,Import,Turkey,All Products,Australia,2018,80.87
+Australia,Import,Sweden,All Products,Australia,2018,637.91
+Australia,Import,Thailand,All Products,Australia,2018,4211.01
+Australia,Import,Ireland,All Products,Australia,2018,72.7
+Australia,Import,Malaysia,All Products,Australia,2018,3553.92
+Australia,Import,Vietnam,All Products,Australia,2018,1243.92
+Australia,Import,United States of America,All Products,Australia,2018,24664.66

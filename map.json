@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "description": "",
   "title": {
-    "text": "Distribution of Australia's import and export volume with other countries in 2018",
+    "text": "Distribution of Australia's import  volume with other countries in 2018",
     "fontSize": 20,
     "color": "black"
   },
@@ -27,10 +27,11 @@
     "select": {
       "type": "single",
       "fields": ["Indicator Type"],
+      
       "bind": {
         "Indicator Type": {
           "input": "select",
-          "options": ["Import", "Export"]
+          "options": ["Import"]
         }
       },
       "init": {"Indicator Type":"Import"}
@@ -57,7 +58,7 @@
         "type": "quantitative",
         "scale": {
           "type": "linear",
-          "domain": [0, 20000],
+          "domain": [0, 60000],
           "scheme": "reds"
         }
       },
